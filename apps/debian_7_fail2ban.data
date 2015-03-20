@@ -1,0 +1,16 @@
+[delimitador]
+key:(ig)
+
+[orden]
+orden:6
+
+[nombre]
+titulo: fail2ban (Debian 7)
+
+[comandoinstalacion]
+opciones: Instalando fail2ban (ig) apt-get install -y fail2ban
+
+[comandopostinstalacion]
+opciones: Haciendo backup de la config de fail2ban (ig) cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.conf_back
+	   	  Instalando configuracion (ig) cp modules/secure_glamp/apps/debian_7_fail2ban/jail.conf /etc/fail2ban/jail.conf  
+	 	  Reiniciando fail2ban (ig) /etc/init.d/fail2ban restart

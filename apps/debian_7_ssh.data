@@ -1,0 +1,16 @@
+[delimitador]
+key:(ig)
+
+[orden]
+orden:7
+
+[nombre]
+titulo: SSH - Ten otro usuario, bloquea acceso root (Debian 7)
+
+[comandoinstalacion]
+opciones:
+
+[comandopostinstalacion]
+opciones: Haciendo backup de la config de ssh (ig) cp /etc/ssh/sshd_config /etc/ssh/sshd_config_back
+	   	  Instalando configuracion (ig) cp modules/secure_glamp/apps/debian_7_ssh/sshd_config /etc/ssh/sshd_config	  
+	 	  Reiniciando ssh (ig) /etc/init.d/ssh reload

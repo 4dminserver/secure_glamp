@@ -1,0 +1,16 @@
+[delimitador]
+key:(ig)
+
+[orden]
+orden:5
+
+[nombre]
+titulo: Porsentry (Debian 7)
+
+[comandoinstalacion]
+opciones: Instalando Porsentry (ig) apt-get install -y portsentry
+
+[comandopostinstalacion]
+opciones: Haciendo backup de Porsentry (ig) cp /etc/portsentry/portsentry.conf /etc/portsentry/portsentry.conf_back
+		  Configurando mod Porsentry (ig) cp modules/secure_glamp/apps/debian_7_portsentry/portsentry.conf /etc/portsentry/portsentry.conf
+	 	  Reiniciando Porsentry (ig) /etc/init.d/portsentry restart	

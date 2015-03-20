@@ -1,0 +1,16 @@
+[delimitador]
+key:(ig)
+
+[orden]
+orden:2
+
+[nombre]
+titulo: SSL Apache (Debian 7)
+
+[comandoinstalacion]
+opciones: Activamos SSL (ig) a2enmod ssl
+
+[comandopostinstalacion]
+opciones: Haciendo backup de la config de ssl (ig) cp /etc/apache2/mods-enabled/ssl.conf /etc/apache2/mods-enabled/ssl.conf_back
+	   	  Instalando configuracion (ig) cp modules/secure_glamp/apps/debian_7_ssl_apache/ssl.conf /etc/apache2/mods-enabled/ssl.conf	  
+	 	  Reiniciando Apache (ig) /etc/init.d/apache2 restart

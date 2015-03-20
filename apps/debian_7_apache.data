@@ -1,0 +1,20 @@
+[delimitador]
+key:(ig)
+
+[orden]
+orden:1
+
+[nombre]
+titulo: Apache + Mysql + PHP (Debian 7)
+
+[comandoinstalacion]
+opciones: Vamos a instalar (ig) apt-get install -y apache2 php5 php5-curl php5-gd phpmyadmin mysql-server
+
+[comandopostinstalacion]
+opciones: Haciendo backup de apache (ig) cp /etc/apache2/apache2.conf /root/apache2.conf_back
+		  (ig) cp /etc/apache2/conf.d/security /etc/apache2/conf.d/security_back
+	   	  Instalando configuracion (ig) cp modules/secure_glamp/apps/debian_7_apache/apache2.conf /etc/apache2/apache2.conf
+	 	  (ig) cp modules/secure_glamp/apps/debian_7_apache/security /etc/apache2/conf.d/security
+	 	  Haciendo backup de PHP (ig) cp /etc/php5/apache2/php.ini /etc/php5/apache2/php.ini_back
+	 	  Instalando configuracion (ig) cp modules/secure_glamp/apps/debian_7_apache/php.ini /etc/php5/apache2/php.ini
+	 	  Reiniciando Apache (ig) /etc/init.d/apache2 restart

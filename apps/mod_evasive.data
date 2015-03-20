@@ -1,0 +1,15 @@
+[delimitador]
+key:(ig)
+
+[orden]
+orden:3
+
+[nombre]
+titulo: mod_evasive apache (Debian 7)
+
+[comandoinstalacion]
+opciones: activando mod evasive (ig) apt-get install -y libapache2-mod-evasive
+
+[comandopostinstalacion]
+opciones: Configurando mod evasive (ig) cp modules/secure_glamp/apps/debian_7_evasive_apache/mod-evasive.conf /etc/apache2/mods-available/mod-evasive.conf
+	 	  Reiniciando Apache (ig) /etc/init.d/apache2 restart	
